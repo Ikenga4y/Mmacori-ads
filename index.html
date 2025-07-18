@@ -6,145 +6,235 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Inter', sans-serif;
-    }
-    body {
-      background-color: #f8f9fa;
-      color: #212529;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-    header, section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.6s ease-in-out;
-    }
-    section.visible, header.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    h1, h2, h3 {
-      margin-bottom: 20px;
-    }
-    .cta-button {
-      display: inline-block;
-      background-color: #007bff;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 600;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-    .cta-button:hover {
-      background-color: #0056b3;
-    }
-    .section {
-      margin-bottom: 60px;
-    }
-    .testimonial {
-      background-color: #fff;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-left: 5px solid #007bff;
-    }
-    .package {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.3s ease;
-    }
-    .package:hover {
-      transform: translateY(-5px);
-    }
-    footer {
-      background: #343a40;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-    }
+    :root {
+      --primary-color: #00c9ff;
+      --accent-color: #92fe9d;
+      --dark-bg: #0f2027;
+      --light-text: #f1f1f1;
+      --highlight: #ff6ec4;
+      --card-bg: #1f2c33;
+      --neon-glow: 0 0 15px #00c9ff, 0 0 25px #ff6ec4, 0 0 35px #92fe9d;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--light-text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header, section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+
+section.visible, header.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), var(--highlight));
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 30px;
+  box-shadow: var(--neon-glow);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--highlight), 0 0 45px var(--primary-color);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-color), var(--highlight));
+  color: white;
+  border-radius: 20px;
+  padding: 100px 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--neon-glow);
+  animation: glowPulse 6s infinite alternate ease-in-out;
+}
+
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 10px var(--highlight); }
+  100% { box-shadow: var(--neon-glow); }
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section {
+  background: var(--card-bg);
+  padding: 40px;
+  border-radius: 16px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.15), 0 0 25px rgba(0, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(0, 255, 255, 0.25), 0 0 35px rgba(0, 255, 255, 0.15);
+}
+
+.testimonial {
+  background: rgba(0, 201, 255, 0.1);
+  border-left: 5px solid var(--primary-color);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.package {
+  background: #1a2a33;
+  padding: 30px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  box-shadow: 0 15px 30px rgba(0, 255, 255, 0.15), 0 0 25px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.package:hover {
+  transform: scale(1.03);
+  box-shadow: 0 25px 60px rgba(0, 255, 255, 0.25), 0 0 35px rgba(0, 255, 255, 0.15);
+}
+
+footer {
+  background: #080f12;
+  color: #ccc;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+}
+
+ul, ol {
+  padding-left: 20px;
+}
+
   </style>
 </head>
 <body>
   <!-- Hero -->
-  <header class="animate__animated">
-    <h1>Grow Your Business with High-Converting Facebook Ads</h1>
-    <p>Struggling to get real results from Facebook ads? I help brands like yours turn clicks into customers.</p>
-    <a href="#contact" class="cta-button">Book an appointment</a>
-  </header>  <!-- Problem -->  <section class="section animate__animated">
-    <h2>Why Your Current Ads Aren’t Working</h2>
-    <ul>
-      <li>You’re not reaching the right audience</li>
-      <li>Your offer isn’t converting</li>
-      <li>You’re unsure how to scale</li>
-    </ul>
-  </section>  <!-- Solution -->  <section class="section animate__animated">
-    <h2>A Proven Facebook Ads System</h2>
-    <p>With my data-driven ad strategies, you get:</p>
-    <ul>
-      <li>Laser-focused targeting</li>
-      <li>Scroll-stopping ad creatives</li>
-      <li>Constant optimization</li>
-      <li>Clear, measurable ROI</li>
-    </ul>
-  </section>  <!-- How it works -->  <section class="section animate__animated">
-    <h2>Simple, Transparent Process</h2>
-    <ol>
-      <li>Free Strategy Call – We identify your goals</li>
-      <li>Campaign Setup – I build your ad funnels</li>
-      <li>Launch & Optimize – Ads go live with testing</li>
-      <li>Growth & Reporting – You see results and scale</li>
-    </ol>
-  </section>  <!-- Packages -->  <section class="section animate__animated">
-    <h2>Packages</h2>
-    <div class="package">
-      <h3>Starter Plan – $497/month</h3>
-      <p>Includes: 1 campaign, 2 creatives, weekly reporting</p>
-    </div>
-    <div class="package">
-      <h3>Growth Plan – $997/month</h3>
-      <p>Full funnel setup, retargeting, A/B testing</p>
-    </div>
-    <div class="package">
-      <h3>Custom Plan</h3>
-      <p>Let’s talk about your unique goals.</p>
-    </div>
-  </section>  <!-- Testimonials -->  <section class="section animate__animated">
-    <h2>What Clients Are Saying</h2>
-    <div class="testimonial">
-      <p><em>"We 4x’d our sales in 60 days. Best decision I ever made."</em> – Sarah K., Skincare Brand Owner</p>
-    </div>
-    <div class="testimonial">
-      <p><em>"I was wasting thousands on ads. Now I finally see a return."</em> – Mike T., E-commerce Store Owner</p>
-    </div>
-  </section>  <!-- Case Study -->  <section class="section animate__animated">
-    <h2>Case Study: EcoWear Clothing</h2>
-    <ul>
-      <li>ROAS: 6.2x</li>
-      <li>Ad Spend: $1,200 → Revenue: $7,440</li>
-      <li>Cost Per Purchase: Down 38%</li>
-    </ul>
-  </section>  <!-- About -->  <section class="section animate__animated">
-    <h2>About Me</h2>
-    <p>Hi, I’m Mmacoric — a Facebook ads strategist with 5+ years of experience. I’ve helped businesses in e-commerce, coaching, and local industries generate real growth through paid advertising.</p>
-  </section>  <!-- Contact CTA -->  <section id="contact" class="section animate__animated">
-    <h2>Ready to Launch Ads That Actually Convert?</h2>
-    <p>Let’s grow your business the smart way.</p>
-    <a href="#" class="cta-button">Book an appointment </a>
-  </section>  <!-- Footer -->  <footer>
+  <header class="hero animate__animated animate__fadeIn">
+    <h1 class="animate__animated animate__fadeInDown">Grow Your Business with High-Converting Facebook Ads</h1>
+    <p class="animate__animated animate__fadeInUp">Struggling to get real results from Facebook ads? I help brands like yours turn clicks into customers.</p>
+    <a href="#contact" class="cta-button animate__animated animate__fadeInUp animate__delay-1s">Book a Free Strategy Call</a>
+  </header>  <main>
+    <!-- Problem -->
+    <section class="section">
+      <h2>Why Your Current Ads Aren’t Working</h2>
+      <ul>
+        <li>You’re not reaching the right audience</li>
+        <li>Your offer isn’t converting</li>
+        <li>You’re unsure how to scale</li>
+      </ul>
+    </section><!-- Solution -->
+<section class="section">
+  <h2>A Proven Facebook Ads System</h2>
+  <p>With my data-driven ad strategies, you get:</p>
+  <ul>
+    <li>Laser-focused targeting</li>
+    <li>Scroll-stopping ad creatives</li>
+    <li>Constant optimization</li>
+    <li>Clear, measurable ROI</li>
+  </ul>
+</section>
+
+<!-- How it works -->
+<section class="section">
+  <h2>Simple, Transparent Process</h2>
+  <ol>
+    <li>Free Strategy Call – We identify your goals</li>
+    <li>Campaign Setup – I build your ad funnels</li>
+    <li>Launch & Optimize – Ads go live with testing</li>
+    <li>Growth & Reporting – You see results and scale</li>
+  </ol>
+</section>
+
+<!-- Packages -->
+<section class="section">
+  <h2>Packages</h2>
+  <div class="package">
+    <h3>Starter Plan – $497/month</h3>
+    <p>Includes: 1 campaign, 2 creatives, weekly reporting</p>
+  </div>
+  <div class="package">
+    <h3>Growth Plan – $997/month</h3>
+    <p>Full funnel setup, retargeting, A/B testing</p>
+  </div>
+  <div class="package">
+    <h3>Custom Plan</h3>
+    <p>Let’s talk about your unique goals.</p>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section">
+  <h2>What Clients Are Saying</h2>
+  <div class="testimonial">
+    <p><em>"We 4x’d our sales in 60 days. Best decision I ever made."</em> – Sarah K., Skincare Brand Owner</p>
+  </div>
+  <div class="testimonial">
+    <p><em>"I was wasting thousands on ads. Now I finally see a return."</em> – Mike T., E-commerce Store Owner</p>
+  </div>
+</section>
+
+<!-- Case Study -->
+<section class="section">
+  <h2>Case Study: EcoWear Clothing</h2>
+  <ul>
+    <li>ROAS: 6.2x</li>
+    <li>Ad Spend: $1,200 → Revenue: $7,440</li>
+    <li>Cost Per Purchase: Down 38%</li>
+  </ul>
+</section>
+
+<!-- About -->
+<section class="section">
+  <h2>About Me</h2>
+  <p>Hi, I’m Mmacoric — a Facebook ads strategist with 5+ years of experience. I’ve helped businesses in e-commerce, coaching, and local industries generate real growth through paid advertising.</p>
+</section>
+
+<!-- Contact CTA -->
+<section id="contact" class="section">
+  <h2>Ready to Launch Ads That Actually Convert?</h2>
+  <p>Let’s grow your business the smart way.</p>
+  <a href="#" class="cta-button">Book Your Free Strategy Call</a>
+</section>
+
+  </main>  <!-- Footer -->  <footer>
     <p>&copy; 2025 Mmacoric Ads. All rights reserved.</p>
   </footer>  <script>
-    // Scroll reveal animation
     const sections = document.querySelectorAll('section, header');
     const revealOnScroll = () => {
       const scrollY = window.pageYOffset + window.innerHeight;
