@@ -189,6 +189,92 @@
       from { transform: rotate(0deg); }
       to { transform: rotate(360deg); }
     }
+    .solution-section p {
+  font-weight: 500;
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.solution-section p:not(.animated-color-text)::first-letter {
+  font-size: 1.6em;
+  font-weight: bold;
+  color: var(--highlight);
+}
+
+.testimony-frame {
+  margin-top: 15px;
+  max-width: 100%;
+  max-height: 400px;
+  overflow: hidden;
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 255, 255, 0.15);
+}
+
+.testimony-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.ads-cta-message {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.ads-cta-message p {
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.arrow-icon {
+  margin: 10px auto 15px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-color), var(--highlight));
+  color: white;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: var(--neon-glow);
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--highlight), 0 0 45px var(--primary-color);
+}
+
+.animated-color-text {
+  font-weight: 600;
+  font-size: 1.1rem;
+  animation: colorSwitch 2s infinite alternate;
+}
+
+@keyframes colorSwitch {
+  0% {
+    color: aqua;
+  }
+  100% {
+    color: hotpink;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -206,16 +292,102 @@
     <h2>Why Your Current Ads Aren’t Working</h2>
     <section class="section">
       <ul>
-        <li>You’re not reaching the right audience</li>
-        <li>Not using the right creative</li>
-        <li>Using wrong call to action </li>
+        <li><h4>You’re not reaching the right audience</h4></li>
+        <li><h4>Not using the right creative<h4></h4></li>
+        <li><h4>Using wrong call to action</h4></li>
+        <li><h4>Not targeting the right audience</h4></li>
+        <li><h4>Not using the right objective</h4></li>
+        <li><h4>Not using the right ads copy</h4></li>
       </ul>
-    </section><h2></h2>
+    </section>
+    <section class="section solution-section">
+  <h2>How to Solve All These Ads Problem So That It Can Deliver What You Want/Need</h2>
+
+  <p>
+    Think of when you use 50k to run ads at the end you have calculated your capital and profit being happy that you're ads will turn up and you make thousands of sales and millions of dollars/naira at the end of it everything did not go as planned and you said this is not working no it's working but you didn't do it rightly.
+    <div class="testimony-frame">
+      <img src="https://i.postimg.cc/90FXdJFf/IMG-20250720-WA0034.jpg" alt="Testimony Image 1">
+    </div>
+  </p>
+
+  <p>
+    Think of that day you made a decision to use your last card/money to run ads thinking that it will boost your business/sales to the next level but at the end it was to no avail even the last card/money wasn't found( it disappeared into thin air) imagine helping someone get out of a pit and the person drag you into the pit that was what happened.
+    <div class="testimony-frame">
+      <img src="https://i.postimg.cc/vB7LgHcs/IMG-20250720-WA0028.jpg" alt="Testimony Image 2">
+    </div>
+  </p>
+
+  <p>
+    Have you ever proposed someone to try out something that you're 100% that it will work out and the person later tried the ads and it doesn't work they will call you a lier that you don't want to tell them the secret to your business ( you're hiding something from them).
+    <div class="testimony-frame">
+      <img src="https://i.postimg.cc/yxdg1VRn/IMG-20250720-WA0030.jpg" alt="Testimony Image 3">
+    </div>
+  </p>
+
+  <p>
+    All this happens because there is something you're not getting right about your ads.
+  </p>
+
+  <div class="ads-cta-message">
+  <p class="animated-color-text">
+    Click here to ask me anything you want to know about your ads. I'm willing to help.
+  </p>
+  <div class="arrow-icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+      <path d="M12 5v14M12 19l7-7M12 19l-7-7" stroke="var(--highlight)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+  <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39" class="cta-button">Click here</a>
+</div>
+</section>
+<h2>Our Services</h2>
 <section class="section">
-  <img src="https://i.postimg.cc/3RsTr3NV/IMG-20250719-WA0014-2.png" alt="Testimonial from Sera" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+  <ul>
+    <li><h4>We teach you how to run profitable and high converting ads for free.</h4></li>
+    <li><h4>We show you what is stopping your ads from delivering.</h4></li>
+    <li><h4>We help you run profitable and high converting Facebook and Instagram ads for your brand, to boost your sales and make your brand reach millions of audience.</h4></li>
+    <li><h4>We manage your social media accounts.</h4></li>
+    <li><h4>We drive more sales to your business with our Facebook and Instagram ads.</h4></li>
+    <li><h4>We allow you ask any question for free on what to do to boost and scale up your ads for your business.</h4></li>
+    <li><h4>Give you ways to solve your ads problem so it can deliver.</h4></li>
+  </ul>
+</section>
+    <h2>Testimonials</h2>
+<section class="section">
+  <!-- Sandra's Testimonial -->
+  <img src="https://i.postimg.cc/3RsTr3NV/IMG-20250719-WA0014-2.png" alt="Testimonial from Sandra" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
   <div class="testimonial">
     <p><em>"I'm Sandra. I had been struggling with ads for a long time — wasting money and seeing no results — until I discovered Mmacoric Ads Agency. Now, I finally get results that make sense!"</em></p>
   </div>
+
+  <!-- Hidden Testimonials -->
+  <div id="moreTestimonials" style="display: none;">
+
+    <img src="https://i.postimg.cc/Xq5yXN8C/IMG-20250719-WA0017.jpg" alt="Testimonial from Coach Peace" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+    <div class="testimonial">
+      <p><em>"I’m Coach Peace. Before working with Mmacoric, my webinar signups were almost nonexistent. Now, I’m filling my sessions weekly. It’s been a game-changer!"</em></p>
+    </div>
+
+    <img src="https://i.postimg.cc/c17x187c/IMG-20250719-WA0011.jpg" alt="Testimonial from Rita" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+    <div class="testimonial">
+      <p><em>"I’m Rita. I tried so many ad managers before this. Mmacoric is the first one who actually understood my brand. The leads I’m getting now are exactly what I needed."</em></p>
+    </div>
+
+    <img src="https://i.postimg.cc/XvWxbmnL/IMG-20250719-WA0013.jpg" alt="Testimonial from Precious" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+    <div class="testimonial">
+      <p><em>"I’m Precious. I was about to give up on Facebook ads completely. Now my business is finally growing. I’m so glad I didn’t quit."</em></p>
+    </div>
+
+    <img src="https://i.postimg.cc/pLCkPkyt/IMG-20250719-WA0015.jpg" alt="Anonymous testimonial" style="width: 100%; border-radius: 12px; margin-bottom: 20px;">
+    <div class="testimonial">
+      <p><em>"Working with Mmacoric has been the best move I made for my business this year. I finally feel confident running ads."</em></p>
+    </div>
+  </div>
+
+  <!-- Toggle Button -->
+  <button id="toggleTestimonials" style="margin-top: 20px; background: none; color: aqua; border: none; font-weight: bold; cursor: pointer; float: right;">
+    See More <i class="fas fa-chevron-down"></i>
+  </button>
 </section>
 
 <h2>What Clients Are Saying</h2>
@@ -226,7 +398,7 @@
   <div class="testimonial">
     <p><em>"I was wasting thousands on ads. Now I finally see a return."</em> – Mike T., E-commerce Store Owner</p>
   </div>
-</section>
+  </section>
 
 <h2>Case Study: EcoWear Clothing</h2>
 <section class="section">
@@ -239,7 +411,7 @@
 
 <h2>About Me</h2>
 <section class="section">
-  <p>Hi, I’m Mmacoric — a Facebook ads strategist with 5+ years of experience. I’ve helped businesses in e-commerce, coaching, and local industries generate real growth through paid advertising.</p>
+  <p>Hi, I'm Mmacoric — a digital marketer and Meta (Facebook and Instagram) ads expert with over 5 years of experience, helping more than 100 businesses and industries scale up through ads.</p>
 </section>
 
 <h2>Ready to Launch Ads That Actually Convert?</h2>
@@ -290,6 +462,16 @@ document.getElementById('instagramIcon').addEventListener('click', function () {
   setTimeout(() => this.classList.remove('spin'), 1000);
 });
 
+ const toggleBtn = document.getElementById('toggleTestimonials');
+const moreTestimonials = document.getElementById('moreTestimonials');
+
+toggleBtn.addEventListener('click', function () {
+  const isVisible = moreTestimonials.style.display === 'block';
+  moreTestimonials.style.display = isVisible ? 'none' : 'block';
+  toggleBtn.innerHTML = isVisible 
+    ? 'See More <i class="fas fa-chevron-down"></i>' 
+    : 'See Less <i class="fas fa-chevron-up"></i>';
+});
   </script>
 </body>
-</html>
+  </html>
