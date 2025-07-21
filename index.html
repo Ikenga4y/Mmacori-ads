@@ -275,6 +275,15 @@
   }
 }
 
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #19e6e6;
+  margin-bottom: 20px;
+}
+
   </style>
 </head>
 <body>
@@ -285,8 +294,11 @@
     <i class="fa-brands fa-facebook facebook-icon" id="facebookIcon"></i>
     <i class="fa-brands fa-instagram instagram-icon" id="instagramIcon"></i>
     <h3 class="animate__animated animate__fadeInDown">Reach more customers, increase conversations, and grow your business with targeted Facebook and Instagram ads</h3>
-    <p class="animate__animated animate__fadeInUp">Say goodbye to low ROI—get campaigns that deliver measurable results. Boost your sales with targeted campaigns<br>Mmacoric advertising agency</p>
-    <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39" class="cta-button animate__animated animate__fadeInUp animate__delay-1s">Click here to ask me anything about your ads</a>
+    <p class="animate__animated animate__fadeInUp">
+  Say goodbye to low ROI—get campaigns that deliver measurable results. Boost your sales with targeted campaigns<br>
+  <span style="display: inline-block; margin-top: 8px; font-size: 1.4em; font-weight: bold;">Mmacoric Advertising Agency</span>
+</p>
+    <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39" class="cta-button animate__animated animate__fadeInUp animate__delay-1s">Click here to get in touch with us</a>
   </header> 
   <main>
     <h2>Why Your Current Ads Aren’t Working</h2>
@@ -304,7 +316,7 @@
   <h2>How to Solve All These Ads Problem So That It Can Deliver What You Want/Need</h2>
 
   <p>
-    Think of when you use 50k to run ads at the end you have calculated your capital and profit being happy that you're ads will turn up and you make thousands of sales and millions of dollars/naira at the end of it everything did not go as planned and you said this is not working no it's working but you didn't do it rightly.
+    Think of when you use 50k to run ads at the end you have calculated your capital and profit being happy that your ads will turn up and you make thousands of sales and millions of dollars/naira at the end of it everything did not go as planned and you said this is not working no it's working but you didn't do it rightly.
     <div class="testimony-frame">
       <img src="https://i.postimg.cc/90FXdJFf/IMG-20250720-WA0034.jpg" alt="Testimony Image 1">
     </div>
@@ -386,8 +398,8 @@
 
   <!-- Toggle Button -->
   <button id="toggleTestimonials" style="margin-top: 20px; background: none; color: aqua; border: none; font-weight: bold; cursor: pointer; float: right;">
-    See More <i class="fas fa-chevron-down"></i>
-  </button>
+  <span style="font-size: 1.5em;">See More</span><i class="fas fa-chevron-down"></i>
+</button>
 </section>
 
 <h2>What Clients Are Saying</h2>
@@ -411,13 +423,14 @@
 
 <h2>About Me</h2>
 <section class="section">
+  <img src="https://i.postimg.cc/bJF4VSmf/IMG-20250721-WA0024.jpg" alt="Mmacoric" class="profile-photo">
   <p>Hi, I'm Mmacoric — a digital marketer and Meta (Facebook and Instagram) ads expert with over 5 years of experience, helping more than 100 businesses and industries scale up through ads.</p>
 </section>
 
 <h2>Ready to Launch Ads That Actually Convert?</h2>
 <section id="contact" class="section">
   <p>Let’s grow your business the smart way.</p>
-  <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39" class="cta-button">Click here to ask me anything about your ads</a>
+  <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39" class="cta-button">Click here to get in touch with us</a>
 </section>
 
   </main>
@@ -469,9 +482,9 @@ toggleBtn.addEventListener('click', function () {
   const isVisible = moreTestimonials.style.display === 'block';
   moreTestimonials.style.display = isVisible ? 'none' : 'block';
   toggleBtn.innerHTML = isVisible 
-    ? 'See More <i class="fas fa-chevron-down"></i>' 
-    : 'See Less <i class="fas fa-chevron-up"></i>';
+    ? '<span style="font-size: 1.5em;">See More</span> <i class="fas fa-chevron-down"></i>' 
+    : '<span style="font-size: 1.5em;">See Less</span> <i class="fas fa-chevron-up"></i>';
 });
   </script>
 </body>
-  </html>
+        </html>
