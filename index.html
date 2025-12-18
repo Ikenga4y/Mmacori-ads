@@ -26,8 +26,8 @@
 
   <!-- Font Awesome for icons -->  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
-
   <style>  
+    /* Base Styles (Mobile First) */  
     body {  
       font-family: 'Inter', 'Open Sans', Arial, sans-serif;  
       color: #333;  
@@ -35,12 +35,12 @@
       padding: 0;  
       background: #fff;  
     }  
-
+  
     section {  
       padding: 40px 16px;  
       text-align: center;  
     }  
-
+  
     h1 {  
       font-size: 18px;   
       font-weight: 900;  
@@ -48,25 +48,26 @@
       margin: 0 auto 12px;  
       max-width: 90%;  
     }  
-
+  
     .subheadline {  
       font-size: 10px;  
       margin-top: 8px;  
       color: #555;  
     }  
-
+  
     h2 {  
       font-size: 18px;  
       font-weight: 900;  
       margin-bottom: 16px;  
     }  
-
+  
     p {  
       font-size: 14px;  
       line-height: 1.5;  
       color: #333;  
     }  
-
+  
+    /* Buttons */  
     .btn {  
       display: inline-block;  
       background: #FF6600;  
@@ -79,11 +80,11 @@
       text-decoration: none;  
       transition: background .3s ease;  
     }  
-
     .btn:hover {  
       background: #e65c00;  
     }  
-
+    
+    /* Buttons */  
     .btns {  
       display: inline-block;  
       background: #FF6600;  
@@ -101,11 +102,11 @@
       left: 250px;
       top: 10px;
     }  
-
     .btns:hover {  
       background: #e65c00;  
     }  
-
+  
+    /* Why Ads Fail */  
     .fail-grid {  
       display: grid;  
       grid-template-columns: 1fr 1fr;  
@@ -113,38 +114,37 @@
       margin-top: 20px;  
       text-align: left;  
     }  
-
     .fail-col {  
       display: flex;  
       flex-direction: column;  
       gap: 12px;  
     }  
-
     .fail-item {  
       font-size: 14px;  
       display: flex;  
       align-items: center;  
       gap: 6px;  
     }  
-
     .icon-x { color: #E53935; }  
     .icon-check { color: #28A745; }  
-
     .solution-title {  
       font-size: 16px;  
       font-weight: 700;  
       margin-bottom: 10px;  
       color: #28A745;  
     }
-
     .sol { 
-      font-size: 16px;
-      font-weight: 700;
-      color: #28A745;
-      position: absolute;
-      left: 250px;
+        font-size: 16px;
+        font-weight: 700;
+        color: #28A745;
+        margin-left: 0px;
+        margin-bottom: 00px;
+        position: absolute;
+        left: 250px;
+        
     } 
-
+  
+    /* What You Get */  
     .get-grid {  
       display: flex;  
       flex-direction: column;  
@@ -153,14 +153,12 @@
       text-align: left;
       position: relative; 
     }  
-
     .get-item {  
       font-size: 14px;  
       display: flex;  
       align-items: center;  
       gap: 6px;  
     }  
-
     .bonus-box {  
       background: #FFF3CD;  
       padding: 14px;  
@@ -168,43 +166,78 @@
       margin-top: 20px;  
       font-size: 13px;  
       display: flex;  
+      align-items: flex-start;  
       gap: 10px;  
       text-align: left;  
     }  
-
+    .bonus-box strong {  
+      display: block;  
+      margin-bottom: 6px;  
+      font-size: 14px;  
+    }  
     .bonus-icon {  
       font-size: 20px;  
       color: #FF6600;  
+      margin-top: 3px;  
     }  
-
+  
+    /* Testimonials */  
     .testimonials { background: #F9F9F9; }  
-
     .testimonial-grid {  
       display: flex;  
+      justify-content: space-between;  
       gap: 10px;  
       margin-top: 20px;  
       overflow-x: auto;  
+      padding-bottom: 10px;  
     }  
-
     .testimonial-card {  
       background: #fff;  
       border-radius: 12px;  
       padding: 14px;  
       min-width: 180px;  
+      flex: 0 0 auto;  
       box-shadow: 0 3px 6px rgba(0,0,0,.1);  
+      transition: transform .3s ease, box-shadow .3s ease;  
     }  
-
+    .testimonial-card:hover {  
+      transform: translateY(-6px);  
+      box-shadow: 0 8px 14px rgba(0,0,0,.15);  
+    }  
     .testimonial-card img {  
       width: 200px;  
       height: 250px;  
       border-radius: 10%;  
+      margin-bottom: 8px;  
     }  
-
+    .testimonial-card p {  
+      font-size: 13px;  
+      font-style: italic;  
+      margin-bottom: 8px;  
+      color: #333;  
+    }  
+    .testimonial-card .name {  
+      font-weight: 600;  
+      font-size: 13px;  
+    }  
+    .testimonial-card .role {  
+      font-size: 12px;  
+      color: #555;  
+    }  
+  
+    /* Final CTA */  
     .final-cta {  
+      background: #fff;  
       padding: 40px 16px;  
       text-align: center;  
     }  
-
+    .final-cta h2 {  
+      font-size: 18px;  
+      margin-bottom: 14px;  
+      max-width: 90%;  
+      margin-left: auto;  
+      margin-right: auto;  
+    }  
     .final-link {  
       display: inline-block;  
       margin-top: 12px;  
@@ -212,20 +245,23 @@
       font-size: 14px;  
       text-decoration: none;  
     }  
+    .final-link:hover {  
+      text-decoration: underline;  
+    }  
   </style>  
 </head>  
 
 <body>  
-
+  <!-- Hero Section -->  
   <section>  
     <h1>Tired of running ads that waste money but bring no sales?</h1>  
     <p class="subheadline">Here’s how smart businesses are fixing their ads and scaling sales…</p>  
-    <a href="https://wa.link/g1uegu" class="btn">Fix My Ads Now</a><br>
-    <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39?mode=wwt" class="final-link">
-      Join Our Free Whatsapp Training
-    </a>  
+    <a href="https://wa.link/g1uegu" class="btn">Fix My Ads Now</a>  
+    <br>
+    <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39?mode=wwt" class="final-link">Join Our Free Whatsapp Training</a>  
   </section>  
-
+  
+  <!-- Why Ads Fail -->  
   <section>  
     <h2>Why Ads Fail</h2>  
     <div class="fail-grid">  
@@ -235,39 +271,67 @@
         <div class="fail-item"><i class="fa-solid fa-circle-xmark icon-x"></i> Wrong CTA</div>  
         <div class="fail-item"><i class="fa-solid fa-circle-xmark icon-x"></i> Poor ad tracking</div>  
       </div>  
+  
       <div class="fail-col">  
         <div class="solution-title">Solution</div>  
         <div class="fail-item"><i class="fa-solid fa-circle-check icon-check"></i> Wrong ad objective</div>  
-        <div class="fail-item"><i class="fa-solid fa-circle-check icon-check"></i> Fix your ads and scale sales</div>  
+        <div class="fail-item"><i class="fa-solid fa-circle-check icon-check"></i> Fix your ads and scale sales</div>    
       </div>  
     </div>  
   </section>  
-
+  
+  <!-- What You Get -->  
   <section>  
     <h2>What You’ll Get</h2>  
     <div class="get-grid">  
       <div class="get-item"><i class="fa-solid fa-rocket icon-check"></i> Free Ads Audit</div>  
       <div class="get-item"><i class="fa-solid fa-folder-open icon-check"></i> Proven Ad Templates</div>  
-      <div class="get-item"><i class="fa-solid fa-circle-check icon-check"></i> Scale sales with optimized ads</div>  
+      <div class="get-item"><i class="fa-solid fa-circle-check icon-check"></i> Scale sales with optimized ads</div>
       <div class="sol">Solution</div>
       <a href="https://wa.link/g1uegu" class="btns">Fix My Ads</a>
-    </div>  
-
     <div class="bonus-box">  
       <i class="fa-solid fa-gift bonus-icon"></i>  
       <div>  
-        <strong>Bonus:</strong> Ads Fix Checklist – same one used to scale campaigns 6x ROAS.  
+        <strong>Bonus:</strong> Ads Fix Checklist – same one used to scale campaigns 6x ROAS. Only for people who click today.  
       </div>  
     </div>  
   </section>  
-
+  
+  <!-- Testimonials -->  
+  <section class="testimonials">  
+    <h2>Here’s what our customers are saying</h2>  
+    <div class="testimonial-grid">  
+      <div class="testimonial-card">  
+        <img src="https://i.ibb.co/JWLSzbhS/IMG-20251023-WA0004.jpg" alt="Customer">  
+        <p>“This really helped fix my ad campaigns.”</p>  
+        <div class="name">Nathan</div>  
+        <div class="role">Marketing Director</div>  
+      </div>  
+      <div class="testimonial-card">  
+        <video width="200" height="250" controls style="border-radius: %; object-fit: cover;">
+          <source src="https://www.dropbox.com/scl/fi/eajmoaljbukbtaw02uudm/VID-20251023-WA0008.mp4?rlkey=gt7lietpmkgwoquohejmoi5go&st=1sc1ozj0&raw=1" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <p>“We saw our ROAS skyrocket.”</p>  
+        <div class="name">Ikechukwu</div>  
+        <div class="role">Growth Manager</div>  
+      </div>
+      <div class="testimonial-card">  
+        <img src="https://i.ibb.co/vvVbpdhp/IMG-20251023-WA0003.jpg" alt="Customer">
+        <p>“I increased sales by 20%.”</p>  
+        <div class="name">Sarah</div>  
+        <div class="role">Entrepreneur</div>  
+      </div>
+    </div>  
+  </section>  
+  
+  <!-- Final CTA -->  
   <section class="final-cta">  
     <h2>Stop wasting money on ads that don’t work. Let’s fix them today</h2>  
-    <a href="https://wa.link/g1uegu" class="btn">Fix My Ads</a><br>
-    <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39?mode=wwt" class="final-link">
-      Join Our Free Whatsapp Training
-    </a>  
+    <a href="https://wa.link/g1uegu" class="btn">Fix My Ads </a>  
+    <br>  
+    <a href="https://chat.whatsapp.com/HvSd2NaioRkLDjaZOGze39?mode=wwt" class="final-link">Join Our Free Whatsapp Training</a>  
   </section>  
-
 </body>  
-</html>
+  </html>
+  
